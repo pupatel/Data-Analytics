@@ -111,7 +111,7 @@ def Stacking(RF,SVM,KNN,NB,LR):
     
     sclf = StackingClassifier(classifiers=[RF, SVM, KNN, NB], meta_classifier=LR)
     return sclf
-
+ 
 
 
 def selectKImportance(model, X, k):
