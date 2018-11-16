@@ -3,7 +3,7 @@
 #Created by Parth Patel, DBI @ University of Delaware, Newark, Delaware 19717
 #Date created: 06/07/2018 
 
-##This script builds Convolutional Neural Network (CNN) classifier using a technique called "stacking" and perfroms 10 fold CV five complete times and outputs accuracy,  recall, specificity, and MCC.
+##This script builds Convolutional Neural Network (CNN) classifier  and perfroms 10 fold CV  and outputs accuracy, recall, specificity, and MCC.
 
 #usage: python3 CNN_model.py
 
@@ -78,8 +78,7 @@ model.add(Activation('relu'))
 model.add(Dropout(0.5))
 model.add(Dense(2))
 model.add(Activation('softmax'))
-model.compile(loss='binary_crossentropy',
-			optimizer='Adam',metrics=['accuracy'])
+model.compile(loss='binary_crossentropy',optimizer='Adam',metrics=['accuracy'])
 callbacks = [EarlyStopping(monitor='val_loss',patience=10,verbose=0),ModelCheckpoint(kf_weights_path,monitor='val_loss',save_best_only=True,verbose=0)]
 model.fit(x=X_train,y=Y_train, validation_data=(X_test,Y_test), batch_size=32, epochs=150, callbacks=callbacks,verbose=1)
 
