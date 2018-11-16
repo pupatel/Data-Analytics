@@ -39,7 +39,7 @@ sents_tokenizer_2= sent_tokenize(text)  # Old tokenizer
 
 #### FILTERING STOPWORDS ######
 
-english_stops = set(stopwords.words('english')) #set english languagge and load stop words
+english_stops = set(stopwords.words('english')) #set english languagge and load stopwords
 words = ["Can't", 'is', 'a', 'contraction']
 print([word for word in words if word not in english_stops]) # output: ["Can't", 'contraction']
 
