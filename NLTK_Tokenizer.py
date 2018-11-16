@@ -10,7 +10,7 @@
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize,RegexpTokenizer
 from nltk.tokenize import WordPunctTokenizer,PunktSentenceTokenizer
-from nltk.corpus import webtext
+from nltk.corpus import webtext,stopwords
 
 #### SENTENCE TOKENIZE ######
 
@@ -31,8 +31,15 @@ regex="Can't is a contraction."
 tokenizer = RegexpTokenizer("[\w']+")
 print (tokenizer.tokenize(regex)) # output: ["Can't", 'is', 'a', 'contraction']
 
-#### Training a sentence tokenizer ######
+#### TRAINING A SENTENCE TOKENIZER ######
 text = webtext.raw('overheard.txt') # Read text example
-sent_tokenizer = PunktSentenceTokenizer(text) # Train tokenizer
+sent_tokenizer = PunktSentenceTokenizer(text) # Train tokenizer on text
 sents_tokenizer_1 = sent_tokenizer.tokenize(text) # Use new tokenizer
-sents_tokenizer_2= sent_tokenize(text)  #Old tokenizer
+sents_tokenizer_2= sent_tokenize(text)  # Old tokenizer
+
+#### FILTERING STOPWORDS ######
+
+english_stops = set(stopwords.words('english')) #set english languagge and load stop words
+words = ["Can't", 'is', 'a', 'contraction']
+print([word for word in words if word not in english_stops]) # output: ["Can't", 'contraction']
+
