@@ -5,6 +5,9 @@
 
 ##  lemmas and synonyms in WordNet
 
+import nltk
+from nltk.corpus import wordnet
+
 #### GET SYNSETS ######
 syns = wordnet.synsets("cookbook")
 print("all synonymes:",syns)
