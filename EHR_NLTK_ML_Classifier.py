@@ -3,7 +3,7 @@
 #Created by Parth Patel, DBI @ University of Delaware, Newark, Delaware 19717
 #Date created: 07/09/2018 
 
-# This script precdits readmission based on hospital discharge summary using PandaS, NLTK, and Sci-kit learn. 
+# This script precdits readmission based on hospital discharge summary using Pandas, NLTK, and Sci-kit learn. 
 # Three stages: (1) Prepare admission table each patiens (2) Prepare notes for patients (3) use Bag-of-words and ML to predict readmission date
 
 ### IMPORTANT NOTE: ADMISSION.csv AND NOTEEVENTS.csv are available freely to download from The MIMIC-III Clinical Database ###
