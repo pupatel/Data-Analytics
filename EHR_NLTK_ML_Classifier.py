@@ -3,7 +3,7 @@
 #Created by Parth Patel, DBI @ University of Delaware, Newark, Delaware 19717
 #Date created: 07/09/2018 
 
-# This script precdits readmission based on hospital discharge summary using Panda, NLTK, and Sci-kit learn. 
+# This script precdits readmission based on hospital discharge summary using PandaS, NLTK, and Sci-kit learn. 
 # Three stages: (1) Prepare admission table each patiens (2) Prepare notes for patients (3) use Bag-of-words and ML to predict readmission date
 
 #usage: python3 Readmission_EHR_NLTK_ML_Classififer.py
