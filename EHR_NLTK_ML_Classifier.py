@@ -6,8 +6,9 @@
 # This script precdits readmission based on hospital discharge summary using PandaS, NLTK, and Sci-kit learn. 
 # Three stages: (1) Prepare admission table each patiens (2) Prepare notes for patients (3) use Bag-of-words and ML to predict readmission date
 
-#usage: python3 Readmission_EHR_NLTK_ML_Classififer.py
+### IMPORTANT NOTE: ADMISSION.csv AND NOTEEVENTS.csv are available freely to download from The MIMIC-III Clinical Database ###
 
+#usage: python3 Readmission_EHR_NLTK_ML_Classififer.py
 
 import pandas as pd
 import numpy as np
