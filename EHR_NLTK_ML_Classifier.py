@@ -114,8 +114,6 @@ df_train = pd.concat([df_train_pos, df_train_neg.sample(n = len(df_train_pos), r
 # SHUFFLE TRAINING SET
 df_train = df_train.sample(n = len(df_train), random_state = 42).reset_index(drop = True)
 
-
-
 ########## STEP 3: USE BAG-OF-OWRDS AND MACHINE LEARNING FOR PREDICTION ############
 
 ## USING BAG-OF-WORDS TECHNIQUE TO PARSE NOTES ##
@@ -143,9 +141,6 @@ def tokenizer_better(text):
     tokens = word_tokenize(text)
     return tokens
 
-
-
-
 #FILTER STOPWORDS FROM THE LIST OF NLTK OR USER DEFINED LIST
 my_stop_words = set(stopwords.words('english'))
 #my_stop_words = ['the','and','to','of','was','with','a','on','in','for','name','is','patient','s','he','at','as','or','one','she','his','her','am','were','you','pt','pm','by','be','had','your','this','date',                'from','there','an','that','p','are','have','has','h','but','o',                'namepattern','which','every','also','should','if','it','been','who','during', 'x']
@@ -169,7 +164,6 @@ y_train = df_train.OUTPUT_LABEL
 y_valid = df_valid.OUTPUT_LABEL
 y_test = df_test.OUTPUT_LABEL
 
-
 ##BUILD A MACHINE LEARNING MODEL##
 
 # LOGISITC REGRESSION
@@ -187,5 +181,3 @@ print(y_valid_preds)
 print(y_test_preds)
 
 print ("Done")
-
-
