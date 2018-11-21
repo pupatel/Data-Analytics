@@ -5,7 +5,7 @@
 # Date created: 08/17/2018
 
 # This script predicts whether the client will subscribe (Yes/No) to a term deposit from direct marketing campaigns (phone calls) of a Portuguese banking institution.
-usage: python3 ML_Spacy_NLP_Text_classification.py
+usage: python3 SparkML_MLib_Classification.py
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import OneHotEncoderEstimator, StringIndexer, VectorAssembler
