@@ -22,9 +22,9 @@ sent= 'Hello World.'
 print(word_tokenize(sent)) # output: ['Hello', 'World', '.']
 
 #### ALTERNATIVE WORD TOKENIZER ######
-
+para_1="Can't is a contraction."
 tokenizer = WordPunctTokenizer() 
-print(tokenizer.tokenize(para)) # output: ['Can', "'", 't', 'is', 'a', 'contraction', '.']
+print(tokenizer.tokenize(para_1)) # output: ['Can', "'", 't', 'is', 'a', 'contraction', '.']
 
 #### REGULAR EXPRESSION TOKENIZER ######
 regex="Can't is a contraction."
