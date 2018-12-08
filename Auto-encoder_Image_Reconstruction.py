@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+#Created by Parth Patel, DBI @ University of Delaware, Newark, Delaware 19717
+#Date created: 8/07/2018
+
+##This script takes input of images -> encode -> decond -> recontrsuct input images using autoencoder. 
+#usage: python3 Auto-encoder_Image_Reconstruction.py
+
 
 import tensorflow as tf
 import numpy as np
